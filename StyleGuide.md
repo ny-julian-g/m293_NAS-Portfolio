@@ -9,3 +9,7 @@ Oder hier: <br>
 - Primär-Farbe: #E95420
 - Sekundär-Farbe: #606060
 - Akzent: #3b00b2
+
+## Font
+Beim Font habe ich mich für den "Segoe UI" entschieden mit einer Liste an alternativ-Schriften. Das verhindert lange ladezeiten und nimmt die zur Zeit verfügbare Font auf dem Gerät.
+"Segoe UI", Roboto, Helvetica, Arial, sans-serif
