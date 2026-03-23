@@ -1,0 +1,545 @@
+/* ============================================================
+   Grund-Einstellungen (Styleguide-Basis)
+   ============================================================ */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* Box-Design aus dem Wireframe */
+.box,
+.main-image-box,
+.project-box,
+.aside-box,
+.project-img,
+.detail-media,
+.team-image,
+.contact-form-section,
+.team-member {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+/* ============================================================
+   BREADCRUMB Navigation
+   ============================================================ */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 4px 8px;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.breadcrumb-link {
+    color: white;
+    text-decoration: none;
+}
+
+.breadcrumb-link:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb-sep {
+    opacity: 0.5;
+}
+
+/* ============================================================
+   FILTER BAR (Projekte-Seite)
+   ============================================================ */
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-select {
+    background-color: #1e1e1e;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    cursor: pointer;
+    min-width: 220px;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #aaaaaa;
+}
+
+/* ============================================================
+   PROJECT CARDS (Projekte-Seite)
+   ============================================================ */
+.project-card {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-img {
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    height: 180px;
+    flex-shrink: 0;
+}
+
+.project-info {
+    padding: 16px;
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ============================================================
+   PROJEKT-DETAIL SEITE
+   ============================================================ */
+.detail-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-media {
+    height: 350px;
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.detail-project-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail-description-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.detail-description-text {
+    margin: 0;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.contact-link:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* ============================================================
+   KONTAKT-SEITE
+   ============================================================ */
+.contact-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.team-image {
+    height: 220px;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+.contact-hero-text {
+    text-align: left;
+}
+
+.contact-headline {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Formular */
+.contact-form-section {
+    align-items: stretch;
+    text-align: left;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.contact-form-section h2 {
+    margin: 0 0 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #1e1e1e;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #aaaaaa;
+}
+
+.submit-btn {
+    background-color: white;
+    color: #121212;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+}
+
+.submit-btn:hover {
+    opacity: 0.85;
+}
+
+/* Team-Sektion */
+.team-title {
+    font-size: 1.3rem;
+    margin: 0 0 16px;
+}
+
+.team-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+.team-member {
+    height: 140px;
+}
+
+
+/* ============================================================
+   DESKTOP LAYOUT (min-width: 1025px)
+   ============================================================ */
+@media (min-width: 1025px) {
+
+    /* HOME */
+    .container {
+        grid-template-columns: 1fr 300px;
+        grid-template-areas:
+            "header header"
+            "main sidebar"
+            "footer footer";
+    }
+
+    .hero-section {
+        display: flex;
+        gap: 20px;
+    }
+
+    .main-image-box { flex: 2; height: 350px; }
+    .content-text { flex: 1; text-align: left; align-items: flex-start; }
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+
+    /* OHNE SIDEBAR (Projekte, Detail, Kontakt) */
+    .container--no-sidebar {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    /* Projekte: 3-Spalten-Grid */
+    .projects-grid--large {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* Detail: Bild links, Text rechts */
+    .detail-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .detail-media {
+        flex: 1.2;
+        height: 420px;
+    }
+
+    .detail-info {
+        flex: 1;
+    }
+
+    /* Kontakt: Hero nebeneinander */
+    .contact-hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .team-image {
+        flex: 1;
+        height: 280px;
+    }
+
+    .contact-hero-text {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* ============================================================
+   TABLET LAYOUT (601px – 1024px)
+   ============================================================ */
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    /* HOME */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .main-image-box { flex: 1; height: 300px; }
+    .content-text { flex: 1; text-align: left; }
+    .projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .project-box { height: 200px; }
+    .sidebar .aside-box { min-height: 150px; margin-top: 20px; }
+
+    /* OHNE SIDEBAR */
+    .container--no-sidebar {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    /* Projekte: 2-Spalten-Grid */
+    .projects-grid--large {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Detail */
+    .detail-section {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .detail-media {
+        flex: 1;
+        height: 300px;
+    }
+
+    .detail-info {
+        flex: 1;
+    }
+
+    /* Kontakt */
+    .contact-hero {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .team-image {
+        flex: 1;
+        height: 220px;
+    }
+
+    .contact-hero-text {
+        flex: 1;
+        padding-left: 16px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ============================================================
+   SMARTPHONE LAYOUT (max-width: 600px)
+   ============================================================ */
+@media (max-width: 600px) {
+
+    /* HOME */
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    .hero-section, .projects-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .main-image-box { height: 200px; }
+    .project-box { height: 150px; }
+
+    /* OHNE SIDEBAR */
+    .container--no-sidebar {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    /* Projekte: 1-Spalten-Grid */
+    .projects-grid--large {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* Detail */
+    .detail-section {
+        flex-direction: column;
+    }
+
+    .detail-media {
+        height: 220px;
+    }
+
+    .detail-project-title {
+        font-size: 1.6rem;
+    }
+
+    .contact-link {
+        align-self: stretch;
+    }
+
+    /* Kontakt */
+    .contact-hero {
+        flex-direction: column;
+    }
+
+    .team-image {
+        height: 180px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-select {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
+
+/* ============================================================
+   GRID-AREAS Zuweisung
+   ============================================================ */
+.header   { grid-area: header; }
+.main-content { grid-area: main; }
+.sidebar  { grid-area: sidebar; }
+.footer   { grid-area: footer; }
+
+/* Header-interne Strukturierung */
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header-title {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Category Link (HOME) */
+.category-link {
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Aside */
+.aside-box {
+    min-height: 200px;
+}
