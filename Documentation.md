@@ -723,3 +723,32 @@ Ich baue auf dem bestehenden Code auf und erstelle alle drei Seiten plus ein akt
 Hier gibt es einen klaren Sieger. Claude hat es deutlich schöner gemacht und organisierter. Es hatte so gut wie keine Macken. Bei Gemini hat es bei meinem Layout, welches ungewöhnlich ist, es nicht geschaft, es zu verhindern, dass die Seite auf der X-Achse bündig ist und man sie nicht verschieben muss.  Die Links waren auch nicht erkennbar oder konnten von der Home-Seite nicht erreicht werden.
 
 Responsiv war es sowohl bei Gemini als auch bei Claude. Bilder werde ich hier nicht zeigen, da es zu viele wären
+
+
+# 3. Vergleich CSS Styling
+Hierbei habe ich beiden den Styleguide und das jetztige CSS gegebnen, um es anzupassen
+
+Es wurden wieder Gemini Fast mit Claude Sonnet 4.6 verglichen.
+
+## Der Skript:
+Passe das CSS so an, dass es dem Styleguide entspricht. Erstelle ebenfalls ein CSS File für die einzelnen Detailseiten:
+
+Styleguide: [Styleguide]
+
+CSS: [Zurzeitiges CSS File]
+
+## Antwort von Gemini:
+Ich schreibe Antworten aus Platzgründen nicht mehr hin, dafür ein Beispielresultat der Beiden Modellen.
+## Antwort Claude
+Ich schreibe Antworten aus Platzgründen nicht mehr hin, dafür ein Beispielresultat der Beiden Modellen.
+## Vergleich:
+Als Vergleichsbild wurde die Home-Seite verwendet.
+
+### Beispiel von Gemini:
+![Gemini CSS](/Zusätze/Images/Design_Gemini.png)
+### Beispiel von Claude:
+![Claude CSS](/Zusätze/Images/Design_Claude.png)
+
+Im 3. Battle lagen die Modelle optisch nah beieinander. Gemini punktete durch Geschwindigkeit, während Claude im Detail (besonders bei den Abständen und der Typografie auf den Detailseiten) harmonischer wirkte.
+
+Ein technischer Minuspunkt für Claude: Die KI verwendete den !important-Tag, um Style-Konflikte zwischen den beiden CSS-Dateien zu lösen. Dies ist zwar funktional, gilt aber als Bad Practice, da es die Wartbarkeit des Codes erschwert (Stichwort: CSS-Spezifität). Gemini löste dies sauberer über die Struktur, auch wenn das Design initial etwas simpler wirkte. Dennoch gewinnt Claude in der Kategorie 'Design-Ästhetik', da das Endergebnis ohne manuelle Nachbesserung moderner aussah.

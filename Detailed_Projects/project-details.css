@@ -1,0 +1,145 @@
+/* ============================================================
+   detail.css – Stile für Projekt-Detailseiten
+   Wird nach style.css eingebunden:
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="detail.css">
+   ============================================================ */
+
+/* ============================================================
+   Inline-Formular auf der Detailseite
+   (überschreibt inline-Styles aus dem HTML-Template sauber)
+   ============================================================ */
+.detail-inline-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail-inline-form input,
+.detail-inline-form textarea {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    border: 2px solid var(--color-secondary);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    font-family: var(--font-stack);
+    width: 100%;
+    transition: border-color var(--transition);
+    resize: vertical;
+}
+
+.detail-inline-form input:focus,
+.detail-inline-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.detail-inline-form button {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: var(--font-stack);
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity var(--transition), background-color var(--transition);
+}
+
+.detail-inline-form button:hover {
+    opacity: 0.88;
+    background-color: #c94518;
+}
+
+/* ============================================================
+   Medienbereich – Bild / Video Placeholder
+   ============================================================ */
+.detail-media-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    padding: 16px;
+    text-align: center;
+}
+
+.detail-media-inner strong {
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.detail-media-inner small {
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+
+/* ============================================================
+   Abschnitt: "Persönliche Beratung"
+   Überschreibt nötige inline-Styles aus dem HTML-Template
+   ============================================================ */
+.detail-consultation {
+    margin-top: 28px;
+    text-align: left;
+    align-items: flex-start !important;
+    background-color: var(--color-surface);
+    border-color: var(--color-secondary) !important;
+}
+
+.detail-consultation h2 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.detail-consultation p {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+    margin: 0 0 12px;
+}
+
+/* ============================================================
+   Link zur allgemeinen Kontaktseite (am Ende der Detail-Info)
+   ============================================================ */
+.detail-contact-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border: 2px solid var(--color-secondary) !important;
+    border-radius: var(--radius-sm);
+    color: var(--color-secondary) !important;
+    font-size: 0.85rem;
+    font-weight: 500;
+    align-self: flex-start;
+    transition: border-color var(--transition), color var(--transition);
+}
+
+.detail-contact-link:hover {
+    border-color: var(--color-primary) !important;
+    color: var(--color-primary) !important;
+}
+
+/* ============================================================
+   Responsive Anpassungen
+   ============================================================ */
+@media (max-width: 600px) {
+    .detail-inline-form button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-contact-link {
+        align-self: stretch;
+        justify-content: center;
+    }
+}
