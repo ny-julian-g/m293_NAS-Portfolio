@@ -1,45 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte - NAS Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="box" style="flex-direction: row; justify-content: space-between; width: 100%;">
-                <a href="home.html" class="nav-link">Home</a>
-                <span>Titel / Projekte</span>
-            </div>
-        </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS Portfolio – Projekte</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container container--no-sidebar">
+      <header class="header">
+        <nav class="breadcrumb">
+          <a href="index.html" class="breadcrumb-link">Home</a>
+        </nav>
+        <div class="box header-title">Titel</div>
+      </header>
 
-        <main class="main-content">
-            <section class="projects-grid">
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 1</div>
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 2</div>
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 3</div>
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 4</div>
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 5</div>
-                <div class="project-box"><div class="img-placeholder">IMG</div> Projekt-Teil 6</div>
-            </section>
-        </main>
+      <main class="main-content">
+        <div class="filter-bar">
+          <select class="filter-select" id="projectFilter">
+            <option value="all">Filter (alle Kategorien)</option>
+            <option value="Setup">Setup</option>
+            <option value="Sicherheit">Sicherheit</option>
+            <option value="Netzwerk">Netzwerk</option>
+            <option value="Software">Software</option>
+          </select>
+        </div>
 
-        <aside class="sidebar">
-            <div class="aside-box">
-                <h3>Filter</h3>
-                <select class="filter-select">
-                    <option>Alle Kategorien</option>
-                    <option>Kategorie 1</option>
-                    <option>Kategorie 2</option>
-                </select>
-            </div>
-        </aside>
-
-        <footer class="footer">
-            <div class="box">Footer mit Kontakt</div>
-        </footer>
+        <section class="projects-grid projects-grid--large" id="projectGrid">
+          <a href="projekt-1.html" class="project-card" data-category="Setup">
+            <div class="project-img">Hardware-Auswahl</div>
+            <div class="project-info">Die Grundlage für dein NAS</div>
+          </a>
+          <a href="projekt-2.html" class="project-card" data-category="Setup">
+            <div class="project-img">Ubuntu Server</div>
+            <div class="project-info">Installation & Basis</div>
+          </a>
+          <a
+            href="projekt-3.html"
+            class="project-card"
+            data-category="Sicherheit"
+          >
+            <div class="project-img">SSH & Security</div>
+            <div class="project-info">Sicherer Fernzugriff</div>
+          </a>
+          <a href="projekt-4.html" class="project-card" data-category="Setup">
+            <div class="project-img">ZFS & RAID</div>
+            <div class="project-info">Datensicherheit auf Disks</div>
+          </a>
+          <a
+            href="projekt-5.html"
+            class="project-card"
+            data-category="Sicherheit"
+          >
+            <div class="project-img">Benutzerrechte</div>
+            <div class="project-info">ACLs & Freigaben</div>
+          </a>
+          <a
+            href="projekt-6.html"
+            class="project-card"
+            data-category="Netzwerk"
+          >
+            <div class="project-img">Samba/NFS</div>
+            <div class="project-info">Netzwerk-Freigaben</div>
+          </a>
+          <a
+            href="projekt-7.html"
+            class="project-card"
+            data-category="Netzwerk"
+          >
+            <div class="project-img">VPN (Tailscale)</div>
+            <div class="project-info">Sicher von unterwegs</div>
+          </a>
+          <a
+            href="projekt-8.html"
+            class="project-card"
+            data-category="Sicherheit"
+          >
+            <div class="project-img">Backup-Strategie</div>
+            <div class="project-info">3-2-1 Regel umsetzen</div>
+          </a>
+          <a
+            href="projekt-9.html"
+            class="project-card"
+            data-category="Software"
+          >
+            <div class="project-img">Docker & Dienste</div>
+            <div class="project-info">Plex, Nextcloud & Co.</div>
+          </a>
+          <a
+            href="projekt-10.html"
+            class="project-card"
+            data-category="Netzwerk"
+          >
+            <div class="project-img">Monitoring</div>
+            <div class="project-info">Systemzustand im Blick</div>
+          </a>
+        </section>
+      </main>
+      
+      <footer class="footer">
+        <div class="box">Footer mit Kontakt</div>
+      </footer>
     </div>
-</body>
+  </body>
 </html>

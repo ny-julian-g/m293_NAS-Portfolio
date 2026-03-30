@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt Detail - NAS Portfolio</title>
+    <title>NAS Portfolio – Projekt Detail</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+
+    <div class="container container--no-sidebar">
         <header class="header">
-            <div class="box" style="flex-direction: row; justify-content: space-between; width: 100%;">
-                <a href="home.html" class="nav-link">Home</a>
-                <span>Projekt-Detail</span>
-            </div>
+            <nav class="breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-sep">›</span>
+                <a href="projekte.html" class="breadcrumb-link">Projekte</a>
+            </nav>
+            <div class="box header-title">Titel</div>
         </header>
 
         <main class="main-content">
-            <section class="hero-section" style="flex-direction: column;">
-                <div class="main-image-box" style="width: 100%; height: 400px;">Bild / Film</div>
-                <div class="content-text" style="margin-top: 20px;">
-                    <h2>Projekt Titel</h2>
-                    <h3>Beschreibung</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="kontakt.html" class="nav-link" style="display: inline-block; margin-top: 20px;">Link zu Kontakt</a>
+            <section class="detail-section">
+                <div class="detail-media box">
+                    Bild / Film
+                </div>
+
+                <div class="detail-info">
+                    <h1 class="detail-project-title">Projekt</h1>
+
+                    <h2 class="detail-description-title">Beschreibung</h2>
+                    <p class="detail-description-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+
+                    <a href="kontakt.html" class="contact-link box">
+                        Link zu Kontaktformular in Kontakt
+                    </a>
                 </div>
             </section>
         </main>
@@ -31,5 +43,6 @@
             <div class="box">Footer mit Kontakt</div>
         </footer>
     </div>
+
 </body>
 </html>
