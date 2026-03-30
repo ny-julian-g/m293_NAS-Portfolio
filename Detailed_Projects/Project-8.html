@@ -1,62 +1,132 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAS Portfolio – [HIER TITEL EINSETZEN]</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NAS Portfolio – Media Server (Plex / Jellyfin)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container container--no-sidebar">
-        <header class="header">
-            <nav class="breadcrumb">
-                <a href="index.html" class="breadcrumb-link">Home</a>
-                <span class="breadcrumb-sep">›</span>
-                <a href="projekte.html" class="breadcrumb-link">Projekte</a>
-            </nav>
-            <div class="box header-title">NAS Projekt Portfolio</div>
-        </header>
+      <header class="header">
+        <nav class="breadcrumb">
+          <a href="../index.html" class="breadcrumb-link">Home</a>
+          <span class="breadcrumb-sep">›</span>
+          <a href="../projekte.html" class="breadcrumb-link">Projekte</a>
+        </nav>
+        <div class="box header-title">NAS Projekt Portfolio</div>
+      </header>
 
-        <main class="main-content">
-            <section class="detail-section">
-                <div class="detail-media box">
-                    <div style="padding: 20px;">
-                        <p><strong>Videoidee:</strong> [HIER VIDEOIDEE AUS CSV]</p>
-                        <p><small>Platzhalter für Bild: [HIER BILDIDEE AUS CSV]</small></p>
-                    </div>
-                    </div>
+      <main class="main-content">
+        <section class="detail-section">
+          <div class="detail-media box">
+            <div style="padding: 20px">
+              <p><strong>Videoidee:</strong> [HIER VIDEOIDEE AUS CSV]</p>
+              <p>
+                <small>Platzhalter für Bild: [HIER BILDIDEE AUS CSV]</small>
+              </p>
+            </div>
+          </div>
 
-                <div class="detail-info">
-                    <h1 class="detail-project-title">[HIER TITEL AUS CSV]</h1>
+          <div class="detail-info">
+            <h1 class="detail-project-title">[HIER TITEL AUS CSV]</h1>
 
-                    <h2 class="detail-description-title">Projektbeschreibung</h2>
-                    <p class="detail-description-text">
-                        [HIER INHALT AUS CSV EINSETZEN]
-                    </p>
+            <h2 class="detail-description-title">
+              Streame Filme und Serien direkt von deinem NAS.
+            </h2>
+            <p class="detail-description-text">
+              Ein Media Server organisiert und streamt Medien auf verschiedene
+              Geräte. Mit GPU-Unterstützung (RTX 3060) ist Hardware-Transcoding
+              möglich. Funktionen: automatische Metadaten Streaming auf TV,
+              Smartphone Benutzerprofile
+            </p>
 
-                    <section class="contact-form-section box" style="margin-top: 30px; text-align: left; align-items: flex-start;">
-                        <h2>Persönliche Beratung zu diesem Thema</h2>
-                        <p>Hast du Fragen zu diesem Schritt? Buche einen Termin.</p>
-                        <form style="width: 100%;">
-                            <input type="text" placeholder="Dein Name" class="form-input" style="width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 5px; border: 1px solid white; background: transparent; color: white;">
-                            <input type="email" placeholder="Deine E-Mail" class="form-input" style="width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 5px; border: 1px solid white; background: transparent; color: white;">
-                            <textarea placeholder="Deine Frage..." style="width: 100%; margin-bottom: 10px; padding: 8px; border-radius: 5px; border: 1px solid white; background: transparent; color: white;"></textarea>
-                            <button type="submit" class="submit-btn" style="background: white; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Termin anfragen</button>
-                        </form>
-                    </section>
-
-                    <a href="kontakt.html" class="contact-link box" style="margin-top: 20px; text-decoration: none; color: white;">
-                        Zur allgemeinen Kontaktseite
-                    </a>
-                </div>
+            <section
+              class="contact-form-section box"
+              style="
+                margin-top: 30px;
+                text-align: left;
+                align-items: flex-start;
+              "
+            >
+              <h2>Persönliche Beratung zu diesem Thema</h2>
+              <p>Hast du Fragen zu diesem Schritt? Buche einen Termin.</p>
+              <form style="width: 100%">
+                <input
+                  type="text"
+                  placeholder="Dein Name"
+                  class="form-input"
+                  style="
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    background: transparent;
+                    color: white;
+                  "
+                />
+                <input
+                  type="email"
+                  placeholder="Deine E-Mail"
+                  class="form-input"
+                  style="
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    background: transparent;
+                    color: white;
+                  "
+                />
+                <textarea
+                  placeholder="Deine Frage..."
+                  style="
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: 1px solid white;
+                    background: transparent;
+                    color: white;
+                  "
+                ></textarea>
+                <button
+                  type="submit"
+                  class="submit-btn"
+                  style="
+                    background: white;
+                    color: black;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-weight: bold;
+                  "
+                >
+                  Termin anfragen
+                </button>
+              </form>
             </section>
-        </main>
 
-        <footer class="footer">
-            <div class="box">NAS Portfolio &copy; 2024 | <a href="kontakt.html" style="color:white;">Kontakt</a></div>
-        </footer>
+            <a
+              href="kontakt.html"
+              class="contact-link box"
+              style="margin-top: 20px; text-decoration: none; color: white"
+            >
+              Zur allgemeinen Kontaktseite
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="box">
+          NAS Portfolio &copy; 2024 |
+          <a href="kontakt.html" style="color: white">Kontakt</a>
+        </div>
+      </footer>
     </div>
-
-</body>
+  </body>
 </html>
