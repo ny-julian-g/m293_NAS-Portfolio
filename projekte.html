@@ -27,11 +27,19 @@
         </div>
 
         <section class="projects-grid projects-grid--large" id="projectGrid">
-          <a href="/Detailed_Projects/Project-1.html" class="project-card" data-category="Setup">
+          <a
+            href="/Detailed_Projects/Project-1.html"
+            class="project-card"
+            data-category="Setup"
+          >
             <div class="project-img">Hardware-Auswahl</div>
             <div class="project-info">Die Grundlage für dein NAS</div>
           </a>
-          <a href="/Detailed_Projects/Project-2.html" class="project-card" data-category="Setup">
+          <a
+            href="/Detailed_Projects/Project-2.html"
+            class="project-card"
+            data-category="Setup"
+          >
             <div class="project-img">Ubuntu Server</div>
             <div class="project-info">Installation & Basis</div>
           </a>
@@ -43,7 +51,11 @@
             <div class="project-img">SSH & Security</div>
             <div class="project-info">Sicherer Fernzugriff</div>
           </a>
-          <a href="/Detailed_Projects/Project-4.html" class="project-card" data-category="Setup">
+          <a
+            href="/Detailed_Projects/Project-4.html"
+            class="project-card"
+            data-category="Setup"
+          >
             <div class="project-img">ZFS & RAID</div>
             <div class="project-info">Datensicherheit auf Disks</div>
           </a>
@@ -102,5 +114,29 @@
         <div class="box">Footer mit Kontakt</div>
       </footer>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const filter = document.getElementById("projectFilter");
+        const cards = document.querySelectorAll(".project-card");
+
+        filter.addEventListener("change", () => {
+          const selectedCategory = filter.value;
+
+          cards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+
+            // Zeige Karte, wenn 'all' gewählt ist oder die Kategorie übereinstimmt
+            if (
+              selectedCategory === "all" ||
+              cardCategory === selectedCategory
+            ) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

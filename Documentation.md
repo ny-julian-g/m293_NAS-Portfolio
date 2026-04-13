@@ -1,7 +1,7 @@
 # m293_NAS-Portfolio_Dokumentation
 
 ## Vergleich ChatGPT vs Gemini
-Folgend sind Kriterien und Vergleiche der LLMs ChatGPT und Gemini
+Folgend sind Kriterien und Vergleiche der "big 4" wenn es um LLMs im User bereich geht: OpenAI, Mistral, Google und Anthropic.
 ### Kriterien:
 - Wurde das Problem gelösst? (Ja/Nein)
 - Kompetenz der Lösung (wie gut wurde es gelösst)
@@ -752,3 +752,21 @@ Als Vergleichsbild wurde die Home-Seite verwendet.
 Im 3. Battle lagen die Modelle optisch nah beieinander. Gemini punktete durch Geschwindigkeit, während Claude im Detail (besonders bei den Abständen und der Typografie auf den Detailseiten) harmonischer wirkte.
 
 Ein technischer Minuspunkt für Claude: Die KI verwendete den !important-Tag, um Style-Konflikte zwischen den beiden CSS-Dateien zu lösen. Dies ist zwar funktional, gilt aber als Bad Practice, da es die Wartbarkeit des Codes erschwert (Stichwort: CSS-Spezifität). Gemini löste dies sauberer über die Struktur, auch wenn das Design initial etwas simpler wirkte. Dennoch gewinnt Claude in der Kategorie 'Design-Ästhetik', da das Endergebnis ohne manuelle Nachbesserung moderner aussah.
+
+# 4. Verleich JS Filter-Logik
+Bei diesem Vergleich geht es darum, wer mit JavaScript
+eine bessere Filterlogik für die Website macht. 
+
+Der Vergleich findet zwischen Gemini Thinking und Claude Sonnet 4.6 statt.
+
+## Prompt
+Folgend erhältst du eine Website, die eine Sammlung mehrerer Projekte beinhaltet. Wenn man alle Projekte ansehen will, soll es auch eine Filterfunktion geben. Implementiere diese Filterfunktion und nutze minimales JavaScript. Wichtig zu wissen ist, dass Project-1 eine von 10 Dateien ist, die alle gleich aufgebaut sind, nur mit anderem Inhalt
+
+## Anworten
+[Gemini](./Prompts/Vergleich_4/gemini.md)
+[Claude](./Prompts/Vergleich_4/claude.md)
+
+## Auswertung
+Ich persönlich finde, Gemini hat hier besser geantwortet. Es hat das vorherige Design übernommen und sauberen code geschrieben.
+Claude hat zwar einen schönneren Filter-Ansatz gehabt, jedoch nicht so, wie gewollt und mit unschönem CSS, was nicht gewollt war. Das CSS hatte wieder die !Important Tags. 
+Beide funktionierten aufgrund der bisherig sauberen umsetzung des codes problemlos.
