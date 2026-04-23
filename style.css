@@ -1,26 +1,33 @@
 :root {
-    --color-text: #f2f2f2;
-    --color-bg: #353535;
+    --color-text: #f7f4f2;
+    --color-bg: #1f1b24;
+    --color-bg-alt: #2c2333;
     --color-primary: #e95420;
-    --color-secondary: #606060;
-    --color-surface: #2a2a2a;
-    --color-border: #606060;
+    --color-primary-hover: #ff6a33;
+    --color-secondary: #aea7b8;
+    --color-accent: #77216f;
+    --color-accent-strong: #5e2750;
+    --color-surface: #2a2432;
+    --color-surface-strong: #342d3d;
+    --color-line: rgba(233, 84, 32, 0.28);
+    --color-line-soft: rgba(119, 33, 111, 0.34);
 
     --font-stack: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-    --radius-sm: 0.375rem;
-    --radius-md: 0.625rem;
-    --radius-lg: 0.875rem;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
 
     --space-xs: 0.5rem;
     --space-sm: 0.75rem;
     --space-md: 1rem;
     --space-lg: 1.25rem;
     --space-xl: 1.5rem;
-    --space-2xl: 1.75rem;
+    --space-2xl: 2rem;
 
-    --border-width: 0.125rem;
-    --transition: 0.2s ease;
+    --shadow-soft: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.28);
+    --shadow-hover: 0 1rem 2rem rgba(0, 0, 0, 0.34);
+    --transition: 0.18s ease;
 }
 
 *,
@@ -34,22 +41,24 @@ html {
 }
 
 body {
+    margin: 0;
+    padding: clamp(0.75rem, 1.6vw, 1rem);
     background-color: var(--color-bg);
     color: var(--color-text);
     font-family: var(--font-stack);
     line-height: 1.6;
-    margin: 0;
-    padding: clamp(0.75rem, 1.6vw, 1rem);
 }
 
 img {
     display: block;
     max-width: 100%;
+    border-radius: var(--radius-md);
 }
 
 a {
     color: var(--color-text);
     text-decoration: none;
+    transition: color var(--transition), transform var(--transition), box-shadow var(--transition), background-color var(--transition);
 }
 
 a:hover {
@@ -94,9 +103,10 @@ ul {
 .contact-form-section,
 .team-member,
 .footer {
-    border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius-md);
     background-color: var(--color-surface);
+    border: 0.0625rem solid var(--color-line-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
 }
 
 .header {
@@ -115,12 +125,13 @@ ul {
 .header-title {
     width: 100%;
     padding: 1.25rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
     color: var(--color-text);
     text-align: left;
-    border-color: var(--color-secondary);
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    background-color: var(--color-surface);
+    border-top: 0.25rem solid var(--color-primary);
 }
 
 .breadcrumb {
@@ -128,9 +139,9 @@ ul {
     flex-wrap: wrap;
     align-items: center;
     gap: 0.375rem;
-    font-size: 0.85rem;
-    color: var(--color-secondary);
     padding-inline: 0.125rem;
+    color: var(--color-secondary);
+    font-size: 0.85rem;
 }
 
 .breadcrumb-link,
@@ -162,9 +173,10 @@ ul {
 .hero-image {
     width: 100%;
     height: auto;
-    border: var(--border-width) solid var(--color-border);
-    border-radius: var(--radius-md);
     background-color: var(--color-surface);
+    border: 0.0625rem solid var(--color-line);
+    box-shadow: var(--shadow-soft);
+    border-radius: var(--radius-lg);
 }
 
 .content-text {
@@ -175,9 +187,12 @@ ul {
 }
 
 .section-title {
+    width: fit-content;
     margin-bottom: 1rem;
-    font-size: 1.35rem;
+    padding-bottom: 0.2rem;
     color: var(--color-primary);
+    font-size: 1.35rem;
+    box-shadow: inset 0 -0.125rem 0 0 var(--color-accent);
 }
 
 .category-link,
@@ -190,21 +205,25 @@ button[type="submit"] {
     border-radius: var(--radius-sm);
     font-size: 0.95rem;
     font-weight: 600;
-    transition: background-color var(--transition), color var(--transition), opacity var(--transition), border-color var(--transition);
+    transition: background-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .category-link,
 .contact-link {
-    padding: 0.75rem 1.25rem;
-    border: var(--border-width) solid var(--color-primary);
-    color: var(--color-primary);
     align-self: flex-start;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border: 0.0625rem solid transparent;
+    box-shadow: 0 0.375rem 1rem rgba(233, 84, 32, 0.22);
 }
 
 .category-link:hover,
 .contact-link:hover {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary-hover);
     color: var(--color-text);
+    transform: translateY(-0.1875rem);
+    box-shadow: 0 0.75rem 1.5rem rgba(233, 84, 32, 0.24);
 }
 
 .home-projects {
@@ -220,24 +239,25 @@ button[type="submit"] {
 
 .project-box,
 .project-card {
-    transition: transform var(--transition), border-color var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
 .project-box {
     display: flex;
     min-height: 9.375rem;
-    padding: 1.25rem;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    padding: 1.25rem;
     color: var(--color-text);
+    text-align: center;
+    border-color: var(--color-line);
 }
 
 .project-box:hover,
 .project-card:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-hover);
     border-color: var(--color-primary);
-    color: var(--color-text);
-    transform: translateY(-0.1875rem);
 }
 
 .project-box-title {
@@ -250,7 +270,7 @@ button[type="submit"] {
     gap: var(--space-sm);
     min-height: 12.5rem;
     padding: 1.25rem;
-    border-color: var(--color-secondary);
+    border-top: 0.1875rem solid var(--color-accent);
 }
 
 .aside-box h2,
@@ -263,7 +283,10 @@ button[type="submit"] {
 .footer-copy,
 .project-info p,
 .contact-form-section p,
-.team-member-role {
+.team-member-role,
+.detail-media,
+.team-image,
+.form-group label {
     color: var(--color-secondary);
 }
 
@@ -282,6 +305,7 @@ button[type="submit"] {
 .social-links img {
     width: 1.875rem;
     height: 1.875rem;
+    border-radius: 0;
     object-fit: contain;
 }
 
@@ -293,8 +317,8 @@ button[type="submit"] {
     justify-content: space-between;
     gap: var(--space-sm);
     padding: 1.25rem;
-    border-color: var(--color-secondary);
     font-size: 0.95rem;
+    border-top: 0.1875rem solid var(--color-primary);
 }
 
 .footer-link {
@@ -314,26 +338,29 @@ button[type="submit"] {
 .filter-select {
     min-width: 13.75rem;
     padding: 0.75rem 1rem;
-    border: var(--border-width) solid var(--color-secondary);
-    border-radius: var(--radius-sm);
     background-color: var(--color-surface);
     color: var(--color-text);
+    border: 0.0625rem solid var(--color-line-soft);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
     font-family: var(--font-stack);
     font-size: 0.95rem;
     cursor: pointer;
-    transition: border-color var(--transition);
+    transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
 }
 
 .filter-select:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.125rem rgba(233, 84, 32, 0.2), var(--shadow-soft);
 }
 
 .project-card {
-    border: var(--border-width) solid var(--color-secondary);
-    border-radius: var(--radius-md);
     overflow: hidden;
+    border-radius: var(--radius-md);
     background-color: var(--color-surface);
+    border-color: var(--color-line-soft);
+    box-shadow: var(--shadow-soft);
 }
 
 .project-card-content {
@@ -347,10 +374,10 @@ button[type="submit"] {
     justify-content: center;
     min-height: 11.25rem;
     padding: 1rem;
-    border-bottom: var(--border-width) solid var(--color-secondary);
-    background-color: var(--color-bg);
-    color: var(--color-secondary);
+    background-color: var(--color-accent-strong);
+    color: var(--color-text);
     text-align: center;
+    box-shadow: inset 0 -0.1875rem 0 0 var(--color-primary);
 }
 
 .project-info {
@@ -361,9 +388,9 @@ button[type="submit"] {
 }
 
 .project-card-title {
+    color: var(--color-text);
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-text);
 }
 
 .detail-section {
@@ -375,9 +402,8 @@ button[type="submit"] {
     display: grid;
     place-items: center;
     padding: 1.25rem;
-    color: var(--color-secondary);
     text-align: center;
-    border-color: var(--color-secondary);
+    border-top: 0.1875rem solid var(--color-primary);
 }
 
 .detail-info {
@@ -387,18 +413,19 @@ button[type="submit"] {
 }
 
 .detail-project-title {
+    color: var(--color-primary);
     font-size: clamp(1.7rem, 4vw, 2.2rem);
     font-weight: 700;
-    color: var(--color-primary);
 }
 
 .detail-description-title {
+    color: var(--color-text);
     font-size: 1.15rem;
     font-weight: 600;
 }
 
 .detail-description-text {
-    opacity: 0.9;
+    color: var(--color-text);
 }
 
 .contact-hero {
@@ -411,9 +438,8 @@ button[type="submit"] {
     display: grid;
     place-items: center;
     padding: 1.25rem;
-    color: var(--color-secondary);
     text-align: center;
-    border-color: var(--color-secondary);
+    border-top: 0.1875rem solid var(--color-accent);
 }
 
 .contact-hero-text {
@@ -424,15 +450,15 @@ button[type="submit"] {
 }
 
 .contact-headline {
-    font-size: clamp(1.75rem, 4vw, 2rem);
     color: var(--color-primary);
+    font-size: clamp(1.75rem, 4vw, 2rem);
 }
 
 .contact-form-section {
     display: grid;
     gap: var(--space-md);
     padding: 1.25rem;
-    border-color: var(--color-secondary);
+    border-top: 0.1875rem solid var(--color-primary);
 }
 
 .contact-form-section h2 {
@@ -445,11 +471,6 @@ button[type="submit"] {
     gap: 0.375rem;
 }
 
-.form-group label {
-    font-size: 0.85rem;
-    color: var(--color-secondary);
-}
-
 .form-group input,
 .form-group textarea,
 .form-input,
@@ -458,14 +479,15 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 0.75rem 0.875rem;
-    border: var(--border-width) solid var(--color-secondary);
-    border-radius: var(--radius-sm);
-    background-color: var(--color-bg);
+    background-color: var(--color-surface-strong);
     color: var(--color-text);
+    border: 0.0625rem solid transparent;
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 0 0.0625rem rgba(255, 255, 255, 0.06);
     font-family: var(--font-stack);
     font-size: 0.95rem;
     resize: vertical;
-    transition: border-color var(--transition);
+    transition: box-shadow var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
 .form-group input:focus,
@@ -476,22 +498,27 @@ input[type="email"]:focus,
 textarea:focus {
     outline: none;
     border-color: var(--color-primary);
+    box-shadow: inset 0 0 0 0.0625rem rgba(233, 84, 32, 0.25);
 }
 
 .submit-btn,
 button[type="submit"] {
     width: fit-content;
     padding: 0.75rem 1.75rem;
-    border: none;
     background-color: var(--color-primary);
     color: var(--color-text);
+    border: none;
+    box-shadow: 0 0.5rem 1.25rem rgba(233, 84, 32, 0.24);
     font-family: var(--font-stack);
     cursor: pointer;
 }
 
 .submit-btn:hover,
 button[type="submit"]:hover {
-    opacity: 0.88;
+    background-color: var(--color-primary-hover);
+    color: var(--color-text);
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1rem 1.75rem rgba(233, 84, 32, 0.24);
 }
 
 .team-section {
@@ -501,8 +528,8 @@ button[type="submit"]:hover {
 }
 
 .team-title {
-    font-size: 1.3rem;
     color: var(--color-primary);
+    font-size: 1.3rem;
 }
 
 .team-grid {
@@ -520,11 +547,13 @@ button[type="submit"]:hover {
     min-height: 6rem;
     padding: 1rem 1.25rem;
     color: var(--color-text);
+    border-color: var(--color-line-soft);
 }
 
 .team-member img {
     width: 4.5rem;
     height: 4.5rem;
+    background-color: var(--color-bg-alt);
     border-radius: 50%;
     object-fit: contain;
     flex-shrink: 0;
@@ -537,6 +566,7 @@ button[type="submit"]:hover {
 }
 
 .team-member-name {
+    color: var(--color-text);
     font-size: 1.1rem;
     font-weight: 600;
 }
