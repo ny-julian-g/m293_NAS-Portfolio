@@ -3,117 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NAS Portfolio – Projekte</title>
+    <title>NAS Portfolio - Projekte</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="container container--no-sidebar">
-      <header class="header">
-        <nav class="breadcrumb">
-          <a href="index.html" class="breadcrumb-link">Home</a>
-        </nav>
-        <div class="box header-title">Alle Projekte</div>
-      </header>
+  <body class="container container--no-sidebar">
+    <header class="header">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html" class="breadcrumb-link">Home</a>
+      </nav>
 
-      <main class="main-content">
-        <div class="filter-bar">
-          <select class="filter-select" id="projectFilter">
+      <div class="header-main">
+        <h1 class="box header-title">Alle Projekte</h1>
+
+        <form class="filter-bar" aria-label="Projektfilter">
+          <label for="projectFilter" class="visually-hidden">
+            Projekte nach Kategorie filtern
+          </label>
+          <select class="filter-select" id="projectFilter" name="projectFilter">
             <option value="all">Filter (alle Kategorien)</option>
             <option value="Setup">Setup</option>
             <option value="Sicherheit">Sicherheit</option>
             <option value="Netzwerk">Netzwerk</option>
             <option value="Software">Software</option>
           </select>
-        </div>
+        </form>
+      </div>
+    </header>
 
-        <section class="projects-grid projects-grid--large" id="projectGrid">
-          <a
-            href="/Detailed_Projects/Project-1.html"
-            class="project-card"
-            data-category="Setup"
-          >
-            <div class="project-img">Hardware-Auswahl</div>
-            <div class="project-info">Die Grundlage für dein NAS</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-2.html"
-            class="project-card"
-            data-category="Setup"
-          >
-            <div class="project-img">Ubuntu Server</div>
-            <div class="project-info">Installation & Basis</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-3.html"
-            class="project-card"
-            data-category="Sicherheit"
-          >
-            <div class="project-img">SSH & Security</div>
-            <div class="project-info">Sicherer Fernzugriff</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-4.html"
-            class="project-card"
-            data-category="Setup"
-          >
-            <div class="project-img">ZFS & RAID</div>
-            <div class="project-info">Datensicherheit auf Disks</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-5.html"
-            class="project-card"
-            data-category="Sicherheit"
-          >
-            <div class="project-img">Benutzerrechte</div>
-            <div class="project-info">ACLs & Freigaben</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-6.html"
-            class="project-card"
-            data-category="Netzwerk"
-          >
-            <div class="project-img">Samba/NFS</div>
-            <div class="project-info">Netzwerk-Freigaben</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-7.html"
-            class="project-card"
-            data-category="Netzwerk"
-          >
-            <div class="project-img">VPN (Tailscale)</div>
-            <div class="project-info">Sicher von unterwegs</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-8.html"
-            class="project-card"
-            data-category="Sicherheit"
-          >
-            <div class="project-img">Backup-Strategie</div>
-            <div class="project-info">3-2-1 Regel umsetzen</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-9.html"
-            class="project-card"
-            data-category="Software"
-          >
-            <div class="project-img">Docker & Dienste</div>
-            <div class="project-info">Plex, Nextcloud & Co.</div>
-          </a>
-          <a
-            href="/Detailed_Projects/Project-10.html"
-            class="project-card"
-            data-category="Netzwerk"
-          >
-            <div class="project-img">Monitoring</div>
-            <div class="project-info">Systemzustand im Blick</div>
-          </a>
-        </section>
-      </main>
+    <main class="main-content">
+      <section
+        class="projects-grid projects-grid--large"
+        id="projectGrid"
+        aria-label="Projektübersicht"
+      >
+        <a
+          href="Detailed_Projects/Project-1.html"
+          class="project-card"
+          data-category="Setup"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Hardware-Auswahl</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Hardware-Auswahl</h2>
+              <p>Die Grundlage für dein NAS</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-2.html"
+          class="project-card"
+          data-category="Setup"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Ubuntu Server</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Ubuntu Server</h2>
+              <p>Installation und Basis</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-3.html"
+          class="project-card"
+          data-category="Sicherheit"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">SSH und Security</div>
+            <div class="project-info">
+              <h2 class="project-card-title">SSH und Security</h2>
+              <p>Sicherer Fernzugriff</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-4.html"
+          class="project-card"
+          data-category="Setup"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">ZFS und RAID</div>
+            <div class="project-info">
+              <h2 class="project-card-title">ZFS und RAID</h2>
+              <p>Datensicherheit auf Disks</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-5.html"
+          class="project-card"
+          data-category="Sicherheit"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Benutzerrechte</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Benutzerrechte</h2>
+              <p>ACLs und Freigaben</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-6.html"
+          class="project-card"
+          data-category="Netzwerk"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Samba und NFS</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Samba und NFS</h2>
+              <p>Netzwerk-Freigaben</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-7.html"
+          class="project-card"
+          data-category="Netzwerk"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">VPN (Tailscale)</div>
+            <div class="project-info">
+              <h2 class="project-card-title">VPN (Tailscale)</h2>
+              <p>Sicher von unterwegs</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-8.html"
+          class="project-card"
+          data-category="Sicherheit"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Backup-Strategie</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Backup-Strategie</h2>
+              <p>3-2-1 Regel umsetzen</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-9.html"
+          class="project-card"
+          data-category="Software"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Docker und Dienste</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Docker und Dienste</h2>
+              <p>Plex, Nextcloud und mehr</p>
+            </div>
+          </article>
+        </a>
+        <a
+          href="Detailed_Projects/Project-10.html"
+          class="project-card"
+          data-category="Netzwerk"
+        >
+          <article class="project-card-content">
+            <div class="project-img" aria-hidden="true">Monitoring</div>
+            <div class="project-info">
+              <h2 class="project-card-title">Monitoring</h2>
+              <p>Systemzustand im Blick</p>
+            </div>
+          </article>
+        </a>
+      </section>
+    </main>
 
-      <footer class="footer">
-        <div class="box">Footer mit Kontakt</div>
-      </footer>
-    </div>
+    <footer class="footer">
+      <p class="footer-copy">Interessiert? Melde dich bei uns.</p>
+      <a href="kontakt.html" class="footer-link">Kontakt</a>
+    </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

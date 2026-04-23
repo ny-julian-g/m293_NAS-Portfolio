@@ -9,51 +9,106 @@
   <body>
     <div class="container">
       <header class="header">
-        <div class="box header-title">NAS Portfolio</div>
+        <h1 class="box header-title">NAS Portfolio</h1>
       </header>
 
       <main class="main-content">
-        <section class="hero-section">
-          <div class="main-image-box">IMG / Video</div>
+        <section class="hero-section" aria-labelledby="intro-title">
+          <img
+            class="hero-image"
+            src="https://www.weetechsolution.com/wp-content/uploads/2024/06/Network-Attached-Storage-%E2%80%93-NAS.jpg"
+            alt="Network Attached Storage im Server-Rack"
+          />
 
-          <div class="content-text">
-            <h2>Was ist ein NAS?</h2>
+          <article class="content-text">
+            <h2 id="intro-title">Was ist ein NAS?</h2>
             <p>
-              Ein NAS (Network Attached Storage) ist ein Speichersystem, das über
-              ein Netzwerk verbunden ist und es Benutzern ermöglicht, Daten zu
-              speichern und darauf zuzugreifen. Es bietet eine zentrale
-              Speicherlösung für mehrere Benutzer und Geräte, wodurch die
-              Zusammenarbeit und der Zugriff auf Dateien erleichtert werden.
+              Ein NAS (Network Attached Storage) ist ein Speichersystem, das
+              über ein Netzwerk verbunden ist und es Benutzern ermöglicht,
+              Daten zentral zu speichern und von mehreren Geräten darauf
+              zuzugreifen.
+            </p>
+            <p>
+              Es vereinfacht Zusammenarbeit, Datensicherung und den Zugriff auf
+              wichtige Dateien im Heimnetz oder im kleinen Team.
             </p>
             <a href="projekte.html" class="category-link">Kategorieübersicht</a>
-          </div>
+          </article>
         </section>
 
-        <section class="projects-grid">
-          <a href="/Detailed_Projects/Project-1.html" class="project-box"
-            >Hardware Auswahl und Planung</a
-          >
-          <a href="/Detailed_Projects/Project-5.html" class="project-box"
-            >Raid konfiguration und Ausfallsicherheit</a
-          >
-          <a href="/Detailed_Projects/Project-10.html" class="project-box">
-            Netzwerk-Konfiguration und Zugriff</a
-          >
+        <section class="home-projects" aria-labelledby="featured-projects-title">
+          <h2 id="featured-projects-title" class="section-title">
+            Ausgewählte Projekte
+          </h2>
+
+          <div class="projects-grid">
+            <a href="Detailed_Projects/Project-1.html" class="project-box">
+              <span class="project-box-title">Hardware Auswahl und Planung</span>
+            </a>
+            <a href="Detailed_Projects/Project-5.html" class="project-box">
+              <span class="project-box-title">
+                Raid Konfiguration und Ausfallsicherheit
+              </span>
+            </a>
+            <a href="Detailed_Projects/Project-10.html" class="project-box">
+              <span class="project-box-title">
+                Netzwerk-Konfiguration und Zugriff
+              </span>
+            </a>
+          </div>
         </section>
       </main>
 
-      <aside class="sidebar">
-        <div class="aside-box">
-          <h3>Aside</h3>
-          <p>Newsletter Abo</p>
-        </div>
+      <aside class="sidebar" aria-label="Zusätzliche Informationen">
+        <section class="aside-box" aria-labelledby="newsletter-title">
+          <h2 id="newsletter-title">Newsletter</h2>
+          <p class="newsletter-text">
+            Erhalte Updates zu neuen NAS-Projekten.
+          </p>
+          <form action="#" method="post" class="newsletter-form">
+            <label for="newsletter-email" class="visually-hidden">
+              E-Mail-Adresse
+            </label>
+            <input
+              type="email"
+              id="newsletter-email"
+              name="newsletter-email"
+              placeholder="Deine E-Mail"
+              class="form-input"
+            />
+            <button type="submit" class="submit-btn">Abonnieren</button>
+          </form>
+        </section>
+
+        <section class="aside-box" aria-labelledby="social-title">
+          <h2 id="social-title">Social Media</h2>
+          <ul class="social-links" aria-label="Social-Media-Kanäle">
+            <li>
+              <img
+                src="https://freepnglogo.com/images/all_img/1691751275tiktok-logo-png-black-and-white.png"
+                alt="TikTok"
+              />
+            </li>
+            <li>
+              <img
+                src="https://freelogopng.com/images/all_img/1658588720instagram-logo-black-and-white.png"
+                alt="Instagram"
+              />
+            </li>
+            <li>
+              <img
+                src="https://www.freeiconspng.com/uploads/facebook-logo-png-white-image-galleries--imagekbm-25.png"
+                alt="Facebook"
+              />
+            </li>
+          </ul>
+          <p class="social-text">Folge uns für Live-Builds.</p>
+        </section>
       </aside>
 
       <footer class="footer">
-        <div class="box">
-          <p>Interressiert? Melde dich bei uns: </p>
-          <a href="kontakt.html" style="color: white">Kontakt</a>
-        </div>
+        <p class="footer-copy">Interessiert? Melde dich bei uns.</p>
+        <a href="kontakt.html" class="footer-link">Kontakt</a>
       </footer>
     </div>
   </body>
