@@ -1,0 +1,83 @@
+Portfolio mit KI-gestützter Webentwicklung
+
+Auftrag
+
+Erstellen Sie ein digitales Portfolio nach Ihrer Wahl. Nutzen Sie KI-gestützte Entwicklungsumgebungen (z. B. Cursor, Windsurf) zur Codegenerierung, Problemlösung und Projektunterstützung. Dokumentieren Sie dabei, wie Sie KI zielgerichtet einsetzen, um effizient zu entwickeln und sich weiterzubilden. Zeigen Sie, wie Sie KI für Layout, Codevorschläge und UI-Optimierungen einsetzen. Nutzen Sie mindestens zwei verschiedene KI-Tools und vergleichen Sie diese anhand von selbst definierten Kriterien.
+
+
+Beschreibung
+
+Präsentieren Sie auf der Startseite die neusten Projekte und bieten Sie eine Übersicht aller Projektkategorien an. Besucherinnen und Besucher sollen sich zudem für einen Newsletter eintragen können, damit sie über neue Projekte informiert bleiben.
+
+
+Präsentieren Sie auf der Projektseite alle Projekte in einer Übersicht und zeigen Sie auf einer Detailseite das jeweilige Projekt mit Bildern und Beschreibung. Bei jedem Projekt soll direkt über ein Formular eine Anfrage für einen Beratungstermin versendet werden können. Teilen Sie die Projekte in Kategorien ein. Es sollen alle Projekte oder nur die Projekte einer bestimmten Kategorie angezeigt werden können.
+
+
+Bieten Sie auf einer Kontaktseite Informationen über das Team an und ein Kontaktformular für alle Anfragen. Über ein Dropdown im Formular sollen verschiedene Betreffzeilen ausgewählt werden können, damit das E-Mail-Programm die Anfragen später automatisch zuordnen kann.
+
+
+Funktionen
+
+� Startseite mit neuen Projekten, Kategorien und Newsletter-Anmeldung
+
+� Projektübersicht mit Kategoriefilter
+
+� Detailseite mit Projektbeschreibung, Bilder und Anfrageformular
+
+� Kontaktformular mit Betreffauswahl
+
+
+Anforderungen
+
+� 100% eigener HTML- und CSS-Code (KI erlaubt, Frameworks nicht)
+
+� Seitenstruktur mit Header, Main und Footer
+
+� Grid-Layout für Projektübersicht und Inhalte
+
+� Formulare für Newsletter und Kontakt
+
+� Responsives Design für Mobile, Tablet und Desktop
+
+� Veröffentlichung und Präsentation auf einem Webserver
+
+
+Umfang
+
+� Webauftritt mit mindestens 3 Hauptseiten (siehe Sitemap)
+
+� Mindestens 10 Projekte inkl. Text, Bilder und Videos
+
+� Wireframes für Mobile, Tablet und Desktop (Git, Markdown)
+
+� Styleguide mit Typografie und Farben (Git, Markdown)
+
+� Dokumentation des KI-Einsatzes (Git, Markdown)
+
+
+
+Optional
+
+� Terminbuchung mit Calendly oder Cal.com (JavaScript erlaubt)
+
+� Merkliste für Projekte (Web Storage API)
+
+
+Abgabe
+
+� Link zum publizierten Webauftritt auf einem Web-Server (z.B. GitHub Pages)
+
+� Link zu Git-Repository mit Quellcode und Dokumentation (Öffentlich)
+
+
+Sozialform
+
+Einzelarbeit
+
+
+Zeit
+
+20 Lektionen
+
+
+Sitemap

@@ -1,6 +1,6 @@
 # m293_NAS-Portfolio_Dokumentation
-
-## Vergleich ChatGPT vs Gemini
+Die gesammte Website kann unter folgendem [Link]( https://ny-julian-g.github.io/m293_NAS-Portfolio/) geoeffnet werden.
+## Vergleich verschiedener KI-Tools
 Folgend sind Kriterien und Vergleiche der "big 4" wenn es um LLMs im User bereich geht: OpenAI, Mistral, Google und Anthropic.
 ### Kriterien:
 - Wurde das Problem gelösst? (Ja/Nein)
@@ -10,7 +10,7 @@ Folgend sind Kriterien und Vergleiche der "big 4" wenn es um LLMs im User bereic
 Ich habe Gemini Fast und LeChat Mistral folgendes Skript und das Wireframe gegeben. 
 ### Skript
 Erstelle die Website mit HTML, Inhaltlich soll es leer sein, nur das Gerüst. Nutze folgendes Wireframe als Vorlage. Darauf ist ein Layout für Smartphone, Tablet und Desktop. Kümmere dich dabei noch nicht um ein responsives Design, es soll jedoch später möglich sein, dieses Design responsiv zu machen. Nutze keine Frameworks! <br>
-Folgendes [WireFrame](./WireFrame-NAS_Portfolio.drawio.pdf) als Anhang.
+Folgendes [WireFrame](./Zusätze/WireFrame-NAS_Portfolio.drawio.pdf) als Anhang.
 
 ### Anwort Gemini
 Antwort von [Gemini](./Prompts/Vergleich_1/Gemini.md)
@@ -100,3 +100,10 @@ Folgend erhältst du eine Website, die eine Sammlung mehrerer Projekte beinhalte
 Ich persönlich finde, Gemini hat hier besser geantwortet. Es hat das vorherige Design übernommen und sauberen code geschrieben.
 Claude hat zwar einen schönneren Filter-Ansatz gehabt, jedoch nicht so, wie gewollt und mit unschönem CSS, was nicht gewollt war. Das CSS hatte wieder die !Important Tags. 
 Beide funktionierten aufgrund der bisherig sauberen umsetzung des codes problemlos.
+
+
+# Abschliessende Prüfung der Anforderungen
+Im Rahmen der Qualitätssicherung wurde der Webauftritt gegen den Projektauftrag M293-PA02 geprüft:
+* Funktionalität: Alle Formulare (Newsletter, Kontakt, Terminbuchung) sind technisch korrekt implementiert. Die Filterlogik wurde um eine URL-Parameter-Erkennung erweitert, um die User Experience von der Startseite aus zu verbessern.
+* Multimedialer Gehalt: Jede Projektseite enthält spezifisches Bildmaterial. Ein zentrales Ambient-Video (HDD-Rotation) unterstützt den technischen Charakter des Portfolios.
+* KI-Methodik: Die Entwicklung erfolgte iterativ. KI-Tools wurden gezielt für Layout-Refactoring, Fehlerbehebung bei Verlinkungen und die Optimierung der responsiven Darstellung eingesetzt.

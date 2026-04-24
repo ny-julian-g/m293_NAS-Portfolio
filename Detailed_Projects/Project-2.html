@@ -44,7 +44,7 @@
             </p>
 
             <section
-              class="contact-form-section box"
+              class="contact-form-section box detail-consultation"
               style="
                 margin-top: 30px;
                 text-align: left;
@@ -53,11 +53,20 @@
             >
               <h2>Persönliche Beratung zu diesem Thema</h2>
               <p>Hast du Fragen zu diesem Schritt? Buche einen Termin.</p>
-              <form style="width: 100%">
+              <form
+                style="width: 100%"
+                class="detail-inline-form"
+                action="mailto:kontakt@nas-portfolio.ch"
+                method="post"
+                enctype="text/plain"
+                data-form="consultation"
+              >
                 <input
                   type="text"
+                  name="name"
                   placeholder="Dein Name"
                   class="form-input"
+                  required
                   style="
                     width: 100%;
                     margin-bottom: 10px;
@@ -70,8 +79,10 @@
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Deine E-Mail"
                   class="form-input"
+                  required
                   style="
                     width: 100%;
                     margin-bottom: 10px;
@@ -83,7 +94,9 @@
                   "
                 />
                 <textarea
+                  name="message"
                   placeholder="Deine Frage..."
+                  required
                   style="
                     width: 100%;
                     margin-bottom: 10px;
@@ -124,5 +137,6 @@
         </div>
       </footer>
     </div>
+    <script src="../script.js"></script>
   </body>
 </html>

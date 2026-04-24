@@ -231,8 +231,19 @@ button[type="submit"] {
     gap: var(--space-md);
 }
 
+.category-overview {
+    display: grid;
+    gap: var(--space-md);
+    margin-top: 1.875rem;
+}
+
 .projects-grid,
 .projects-grid--large {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.category-grid {
     display: grid;
     gap: var(--space-lg);
 }
@@ -263,6 +274,34 @@ button[type="submit"] {
 .project-box-title {
     font-size: 1rem;
     font-weight: 600;
+}
+
+.category-card {
+    display: grid;
+    gap: 0.35rem;
+    padding: 1.125rem 1.25rem;
+    background-color: var(--color-surface);
+    border: 0.0625rem solid var(--color-line-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.category-card:hover {
+    color: var(--color-text);
+    transform: translateY(-0.25rem);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-primary);
+}
+
+.category-card-label {
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.category-card-text {
+    color: var(--color-secondary);
+    font-size: 0.95rem;
 }
 
 .aside-box {
@@ -442,6 +481,12 @@ button[type="submit"] {
     border-top: 0.1875rem solid var(--color-accent);
 }
 
+.team-image figcaption {
+    margin-top: 0.875rem;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+
 .contact-hero-text {
     display: grid;
     gap: var(--space-sm);
@@ -472,10 +517,12 @@ button[type="submit"] {
 }
 
 .form-group input,
+.form-group select,
 .form-group textarea,
 .form-input,
 input[type="text"],
 input[type="email"],
+select,
 textarea {
     width: 100%;
     padding: 0.75rem 0.875rem;
@@ -491,10 +538,12 @@ textarea {
 }
 
 .form-group input:focus,
+.form-group select:focus,
 .form-group textarea:focus,
 .form-input:focus,
 input[type="text"]:focus,
 input[type="email"]:focus,
+select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--color-primary);
@@ -599,6 +648,10 @@ button[type="submit"]:hover {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .detail-section,
     .contact-hero {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -645,6 +698,10 @@ button[type="submit"]:hover {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
+    .category-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
     .detail-section {
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         align-items: start;
@@ -670,6 +727,10 @@ button[type="submit"]:hover {
     }
 
     .projects-grid--large {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
         grid-template-columns: 1fr;
     }
 

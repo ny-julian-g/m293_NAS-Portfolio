@@ -38,21 +38,50 @@
 
         <section class="home-projects" aria-labelledby="featured-projects-title">
           <h2 id="featured-projects-title" class="section-title">
-            Ausgewählte Projekte
+            Neuste Projekte
           </h2>
 
           <div class="projects-grid">
-            <a href="Detailed_Projects/Project-1.html" class="project-box">
-              <span class="project-box-title">Hardware Auswahl und Planung</span>
+            <a href="Detailed_Projects/Project-8.html" class="project-box">
+              <span class="project-box-title">Backup-Strategie</span>
             </a>
-            <a href="Detailed_Projects/Project-5.html" class="project-box">
-              <span class="project-box-title">
-                Raid Konfiguration und Ausfallsicherheit
-              </span>
+            <a href="Detailed_Projects/Project-9.html" class="project-box">
+              <span class="project-box-title">Docker und Dienste</span>
             </a>
             <a href="Detailed_Projects/Project-10.html" class="project-box">
-              <span class="project-box-title">
-                Netzwerk-Konfiguration und Zugriff
+              <span class="project-box-title">Monitoring und Systempflege</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="category-overview" aria-labelledby="category-overview-title">
+          <h2 id="category-overview-title" class="section-title">
+            Projektkategorien
+          </h2>
+
+          <div class="category-grid">
+            <a href="projekte.html?category=Setup" class="category-card">
+              <span class="category-card-label">Setup</span>
+              <span class="category-card-text">
+                Hardware, Installation und Grundaufbau
+              </span>
+            </a>
+            <a href="projekte.html?category=Sicherheit" class="category-card">
+              <span class="category-card-label">Sicherheit</span>
+              <span class="category-card-text">
+                Schutz, Backup und Ausfallsicherheit
+              </span>
+            </a>
+            <a href="projekte.html?category=Netzwerk" class="category-card">
+              <span class="category-card-label">Netzwerk</span>
+              <span class="category-card-text">
+                Zugriff, Freigaben und Verwaltung
+              </span>
+            </a>
+            <a href="projekte.html?category=Software" class="category-card">
+              <span class="category-card-label">Software</span>
+              <span class="category-card-text">
+                Container, Dienste und Self-Hosting
               </span>
             </a>
           </div>
@@ -65,7 +94,13 @@
           <p class="newsletter-text">
             Erhalte Updates zu neuen NAS-Projekten.
           </p>
-          <form action="#" method="post" class="newsletter-form">
+          <form
+            action="mailto:kontakt@nas-portfolio.ch"
+            method="post"
+            enctype="text/plain"
+            class="newsletter-form"
+            data-form="newsletter"
+          >
             <label for="newsletter-email" class="visually-hidden">
               E-Mail-Adresse
             </label>
@@ -75,6 +110,7 @@
               name="newsletter-email"
               placeholder="Deine E-Mail"
               class="form-input"
+              required
             />
             <button type="submit" class="submit-btn">Abonnieren</button>
           </form>
@@ -111,5 +147,7 @@
         <a href="kontakt.html" class="footer-link">Kontakt</a>
       </footer>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

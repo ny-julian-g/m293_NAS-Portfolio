@@ -17,7 +17,11 @@
     <main class="main-content">
       <section class="contact-hero" aria-labelledby="contact-hero-title">
         <figure class="team-image">
-          <figcaption>Bild vom Team</figcaption>
+          <img
+            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+            alt="Team bei der Planung eines NAS-Projekts"
+          />
+          <figcaption>Planung, Beratung und Umsetzung aus einer Hand.</figcaption>
         </figure>
 
         <div class="contact-hero-text">
@@ -31,13 +35,25 @@
         </div>
       </section>
 
-      <form class="contact-form-section" action="#" method="post">
+      <form
+        class="contact-form-section"
+        action="mailto:kontakt@nas-portfolio.ch"
+        method="post"
+        enctype="text/plain"
+        data-form="contact"
+      >
         <h2>Kontaktformular</h2>
         <p>Wir melden uns so schnell wie möglich bei dir.</p>
 
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Dein Name" />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Dein Name"
+            required
+          />
         </div>
 
         <div class="form-group">
@@ -47,7 +63,19 @@
             id="email"
             name="email"
             placeholder="deine@email.ch"
+            required
           />
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Betreff</label>
+          <select id="subject" name="subject" required>
+            <option value="">Bitte wählen</option>
+            <option value="Allgemeine Frage">Allgemeine Frage</option>
+            <option value="Projektberatung">Projektberatung</option>
+            <option value="Newsletter">Newsletter</option>
+            <option value="Technische Rückfrage">Technische Rückfrage</option>
+          </select>
         </div>
 
         <div class="form-group">
@@ -57,6 +85,7 @@
             name="message"
             rows="5"
             placeholder="Deine Nachricht..."
+            required
           ></textarea>
         </div>
 
@@ -89,7 +118,7 @@
           <li class="team-member">
             <img
               src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/claude-color.png"
-              alt="Profilbild von Teammitglied"
+              alt="Claude Logo"
             />
             <div class="team-member-content">
               <p class="team-member-name">Claude</p>
@@ -101,8 +130,12 @@
     </main>
 
     <footer class="footer">
-      <p class="footer-copy">Zurück zur Übersicht oder direkt weiter zu den Projekten.</p>
+      <p class="footer-copy">
+        Zurück zur Übersicht oder direkt weiter zu den Projekten.
+      </p>
       <a href="projekte.html" class="footer-link">Projekte</a>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
