@@ -21,7 +21,7 @@
       <main class="main-content">
         <section class="detail-section">
           <div class="detail-media box">
-            <div style="padding: 20px">
+            <div class="detail-media-frame">
               <img src="https://linuxiac.b-cdn.net/wp-content/uploads/2024/09/nextcloud-hub-9-01.jpg" alt="Nextcloud Webinterface" />  
             </div>
           </div>
@@ -41,16 +41,10 @@
 
             <section
               class="contact-form-section box detail-consultation"
-              style="
-                margin-top: 30px;
-                text-align: left;
-                align-items: flex-start;
-              "
             >
               <h2>Persönliche Beratung zu diesem Thema</h2>
               <p>Hast du Fragen zu diesem Schritt? Buche einen Termin.</p>
               <form
-                style="width: 100%"
                 class="detail-inline-form"
                 action="mailto:kontakt@nas-portfolio.ch"
                 method="post"
@@ -63,15 +57,6 @@
                   placeholder="Dein Name"
                   class="form-input"
                   required
-                  style="
-                    width: 100%;
-                    margin-bottom: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    border: 1px solid white;
-                    background: transparent;
-                    color: white;
-                  "
                 />
                 <input
                   type="email"
@@ -79,42 +64,15 @@
                   placeholder="Deine E-Mail"
                   class="form-input"
                   required
-                  style="
-                    width: 100%;
-                    margin-bottom: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    border: 1px solid white;
-                    background: transparent;
-                    color: white;
-                  "
                 />
                 <textarea
                   name="message"
                   placeholder="Deine Frage..."
                   required
-                  style="
-                    width: 100%;
-                    margin-bottom: 10px;
-                    padding: 8px;
-                    border-radius: 5px;
-                    border: 1px solid white;
-                    background: transparent;
-                    color: white;
-                  "
                 ></textarea>
                 <button
                   type="submit"
                   class="submit-btn"
-                  style="
-                    background: white;
-                    color: black;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-weight: bold;
-                  "
                 >
                   Termin anfragen
                 </button>
@@ -129,7 +87,7 @@
       <footer class="footer">
         <div class="box">
          <p>NAS Portfolio &copy; 2026</p>
-         <a href="../kontakt.html" style="color: white">Kontakt</a>
+          <a href="../kontakt.html" class="detail-footer-link">Kontakt</a>
         </div>
       </footer>
     </div>

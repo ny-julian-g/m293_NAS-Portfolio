@@ -1,5 +1,15 @@
 # m293_NAS-Portfolio_Dokumentation
-Die gesammte Website kann unter folgendem [Link]( https://ny-julian-g.github.io/m293_NAS-Portfolio/) geoeffnet werden.
+- Die gesammte Website kann unter folgendem [Link]( https://ny-julian-g.github.io/m293_NAS-Portfolio/) geoeffnet werden.
+- Das Git-Repo ist unter folgendem Link aufrufbar: [Git-Repo](https://github.com/ny-julian-g/m293_NAS-Portfolio).
+- Der [Styleguide](./StyleGuide.md) ist in per Link erreichbar.
+- Die [Wireframes](./Zusätze/WireFrame-NAS_Portfolio.drawio.pdf) sind per Link erreichber. 
+---
+## Learnings:
+* Dateistruktur & Konventionen: Ich habe gelernt, wie wichtig eine korrekte Ordnerstruktur ist. Ein spezifisches Learning war die Vermeidung von Umlauten in Pfaden, da diese auf Webservern (GitHub Pages) zu Problemen führen können. 
+* Effizientes Prompt-Engineering: Durch den Vergleich verschiedener Tools habe ich gelernt, Prompts präziser zu formulieren, um "Halluzinationen" oder ineffiziente Iterationen der KI zu vermeiden. 
+* Code-Qualität & Refactoring: Ein wichtiges Learning war die Identifikation von "Bad Practices" (z.B. die übermässige Verwendung von !important-Tags durch KIs). Dies schärfte mein Verständnis für CSS-Spezifität.
+* Multimedia-Integration: Die Einbindung von Video-Content (<video>-Tag mit Autoplay/Muted-Logik) war eine neue technische Erfahrung, die meine HTML-Skills erweitert hat. 
+---
 ## Vergleich verschiedener KI-Tools
 Folgend sind Kriterien und Vergleiche der "big 4" wenn es um LLMs im User bereich geht: OpenAI, Mistral, Google und Anthropic.
 ### Kriterien:
